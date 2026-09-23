@@ -16,13 +16,31 @@ Some basic registers widely used for operations are :-
 1) x0 = It is always 0
 2) x1 = Also known as ra (return address)
 3) x2 = Also known as sp (stack pointer)
-4) x10 = a0
-5) x11 = a1
+4) x10 = a0 (argument/return value)
+5) x11 = a1 (argument/return value)
 
 Load Words :-
-1) lw(load from memory)
+lw(load from memory)
 lw x3, 0(x1)
-Memory → Register
+Loads data from memory into a register (Memory → Register)
 
 Store Word:-
+sw(store to memory)
 sw x3, 0(x1)
+Stores data from a register into memory 
+(Register → Memory)
+
+In a Instruction format, there are different fields :-
+
+opcode|rd|rs1|rs2|funct3|funct7|immediate
+
+for example :- add x3, x1, x2
+                    ↑   ↑   ↑
+                   rd  rs1 rs2
+x1 = 2
+x2 = 3
+x3 = x1 + x2 = 5
+
+Types of Instruction format :-
+1) R-type : generally register to register operations
+2) I-type : One immediate value is involved
