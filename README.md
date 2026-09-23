@@ -35,8 +35,6 @@ In a Instruction format, there are different fields :-
 opcode|rd|rs1|rs2|funct3|funct7|immediate
 
 for example :- add x3, x1, x2
-                    ↑   ↑   ↑
-                   rd  rs1 rs2
 x1 = 2
 x2 = 3
 x3 = x1 + x2 = 5
